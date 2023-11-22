@@ -14,24 +14,25 @@ namespace SendEmailSMTP
     public class SendEmailClass
     {
         public static string sendEmail(
-            string fromAddress, 
+            string fromAddress,
             string toAddress,
             string ccAddress,
             string bccAddress,
+            string replyToAddress,
             string subject,
             bool isHtmlBody,
             string body,
-            string severHost, 
+            string severHost,
             int serverPort,
-            bool secureConnection, 
+            bool secureConnection,
             string username,
             string password,
             string attachments)
         {
-            
+
             try
             {
-              
+
                 MailMessage message = new MailMessage();
                 SmtpClient smtp = new SmtpClient();
                 message.From = new MailAddress(fromAddress);
@@ -43,7 +44,7 @@ namespace SendEmailSMTP
                         message.To.Add(new MailAddress(toEmail));
                         LogToFile(" INFO : New Email added as TO Address : " + toEmail);
                     }
-          
+
                 }
                 if (ccAddress.Length > 0)
                 {
@@ -66,6 +67,15 @@ namespace SendEmailSMTP
                     }
                 }
 
+                if (replyToAddress.Length > 0)
+                {
+                    string[] replyToAdrs = replyToAddress.Split(',');
+                    foreach (string replyToEmail in replyToAdrs)
+                    {
+                        message.ReplyToList.Add(new MailAddress(replyToEmail)); //Adding Multiple ReplyTo Email addresses
+                        LogToFile(" INFO : New email address added to ReplyTo : " + replyToEmail);
+                    }
+                }
 
                 message.Subject = subject;
                 message.IsBodyHtml = isHtmlBody;
@@ -82,9 +92,9 @@ namespace SendEmailSMTP
                 }
                 else
                 {
-                    LogToFile(" INFO : No Attachments to be send");
+                    LogToFile(" INFO : No Attachments to be sent");
                 }
-                smtp.Port =serverPort;
+                smtp.Port = serverPort;
                 smtp.Host = severHost;
                 LogToFile(" INFO : Configured smtp host : " + severHost);
                 LogToFile(" INFO : Configured smtp port : " + serverPort);
@@ -104,12 +114,12 @@ namespace SendEmailSMTP
                 smtp.Credentials = new NetworkCredential(username, password);
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Send(message);
-                LogToFile(" INFO : Email send successfully");
-                return "Email send successfully";
+                LogToFile(" INFO : Email sent successfully");
+                return "Email sent successfully";
             }
             catch (Exception ex)
             {
-                LogToFile(" ERROR: "+ ex.Message);
+                LogToFile(" ERROR: " + ex.Message);
                 return ex.Message;
             }
         }
@@ -119,13 +129,13 @@ namespace SendEmailSMTP
         private static void LogToFile(string line)
         {
             string logFile = "EmailSendSmtp.log";
-           string logFileFolderPath = getLogFolderPath();
+            string logFileFolderPath = getLogFolderPath();
 
-                DateTime dateNow = DateTime.Now;
+            DateTime dateNow = DateTime.Now;
             //2022 - Mar - 23 Wed 09:09:50.623
             string now = dateNow.ToString("yyyy-MMM-dd ddd HH:mm:ss");
 
-            if (!File.Exists(logFileFolderPath+ logFile))
+            if (!File.Exists(logFileFolderPath + logFile))
             {
                 if (!Directory.Exists(logFileFolderPath))
                 {
@@ -134,8 +144,8 @@ namespace SendEmailSMTP
                 File.Create(logFileFolderPath + logFile).Dispose();
 
                 using (TextWriter tw = new StreamWriter(logFileFolderPath + logFile, true))
-                { 
-                    tw.WriteLine(now + ": "+ line);
+                {
+                    tw.WriteLine(now + ": " + line);
                 }
 
             }

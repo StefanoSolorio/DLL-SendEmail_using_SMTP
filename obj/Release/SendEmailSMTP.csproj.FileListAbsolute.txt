@@ -4,3 +4,9 @@ C:\Users\Sikha.P\source\repos\SendEmailSMTP\obj\Release\SendEmailSMTP.csprojAsse
 C:\Users\Sikha.P\source\repos\SendEmailSMTP\obj\Release\SendEmailSMTP.csproj.CoreCompileInputs.cache
 C:\Users\Sikha.P\source\repos\SendEmailSMTP\obj\Release\SendEmailSMTP.dll
 C:\Users\Sikha.P\source\repos\SendEmailSMTP\obj\Release\SendEmailSMTP.pdb
+C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\bin\Release\SendEmailSMTP.dll
+C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\bin\Release\SendEmailSMTP.pdb
+C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.csproj.AssemblyReference.cache
+C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.dll
+C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.pdb
