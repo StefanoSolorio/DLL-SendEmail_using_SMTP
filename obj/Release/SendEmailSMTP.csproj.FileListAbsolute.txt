@@ -10,3 +10,9 @@ C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\ob
 C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.dll
 C:\Users\Lenovo ThinkPad\Source\Repos\StefanoSolorio\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.pdb
+C:\Users\StefanoSolorio\Documents\GitHub\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.csproj.AssemblyReference.cache
+C:\Users\StefanoSolorio\Documents\GitHub\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.csproj.CoreCompileInputs.cache
+C:\Users\StefanoSolorio\Documents\GitHub\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.dll
+C:\Users\StefanoSolorio\Documents\GitHub\DLL-SendEmail_using_SMTP\obj\Release\SendEmailSMTP.pdb
+C:\Users\StefanoSolorio\Documents\GitHub\DLL-SendEmail_using_SMTP\bin\Release\SendEmailSMTP.dll
+C:\Users\StefanoSolorio\Documents\GitHub\DLL-SendEmail_using_SMTP\bin\Release\SendEmailSMTP.pdb
